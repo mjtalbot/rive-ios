@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C9C73E9324FC471E00EF9516"
-               BuildableName = "RiveExample.app"
-               BlueprintName = "RiveExample"
+               BuildableName = "Example (iOS).app"
+               BlueprintName = "Example (iOS)"
                ReferencedContainer = "container:RiveExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C9C73E9324FC471E00EF9516"
-            BuildableName = "RiveExample.app"
-            BlueprintName = "RiveExample"
+            BuildableName = "Example (iOS).app"
+            BlueprintName = "Example (iOS)"
             ReferencedContainer = "container:RiveExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C9C73E9324FC471E00EF9516"
-            BuildableName = "RiveExample.app"
-            BlueprintName = "RiveExample"
+            BuildableName = "Example (iOS).app"
+            BlueprintName = "Example (iOS)"
             ReferencedContainer = "container:RiveExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

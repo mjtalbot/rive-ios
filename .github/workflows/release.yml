@@ -23,11 +23,11 @@ jobs:
       id-token: write
       contents: read
     steps:
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-region: us-west-2
-          role-to-assume: ${{ secrets.ACTIONS_ROLE }}
+      # - name: Configure AWS Credentials
+      #   uses: aws-actions/configure-aws-credentials@v1
+      #   with:
+      #     aws-region: us-west-2
+      #     role-to-assume: ${{ secrets.ACTIONS_ROLE }}
       - name: Checkout Code
         uses: actions/checkout@v3
         with:
@@ -222,22 +222,22 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_GITHUB }}
 
-  publish_cocoapods:
-    name: Publish framework to cocoapods
-    runs-on: macos-12
-    needs: [determine_version, build_framework, do_release]
-    steps:
-      - name: Download framework artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: RiveRuntime.xcframework.zip
-      - name: Download podspec file
-        uses: actions/download-artifact@v3
-        with:
-          name: RiveRuntime.podspec
-      - name: Extract archive to pass cocoapods validation
-        run: unzip RiveRuntime.xcframework.zip
-      - name: Publish pod to the CocoaPods
-        uses: michaelhenry/deploy-to-cocoapods-github-action@1.0.10
-        env:
-          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+  # publish_cocoapods:
+  #   name: Publish framework to cocoapods
+  #   runs-on: macos-12
+  #   needs: [determine_version, build_framework, do_release]
+  #   steps:
+  #     - name: Download framework artifact
+  #       uses: actions/download-artifact@v3
+  #       with:
+  #         name: RiveRuntime.xcframework.zip
+  #     - name: Download podspec file
+  #       uses: actions/download-artifact@v3
+  #       with:
+  #         name: RiveRuntime.podspec
+  #     - name: Extract archive to pass cocoapods validation
+  #       run: unzip RiveRuntime.xcframework.zip
+  #     - name: Publish pod to the CocoaPods
+  #       uses: michaelhenry/deploy-to-cocoapods-github-action@1.0.10
+  #       env:
+  #         COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}

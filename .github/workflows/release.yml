@@ -95,7 +95,7 @@ jobs:
           cp premake5 bin/premake5
           sudo mv premake5 /usr/local/bin
       - name: Build skia files
-        run: ./scripts/build.skia.macossh -a ${{ matrix.arch }}
+        run: ./scripts/build.skia.macos.sh -a ${{ matrix.arch }}
 
   determine_version:
     name: Determine the next build version

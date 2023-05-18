@@ -27,5 +27,5 @@ xcodebuild \
   -create-xcframework \
   -framework "${BASEDIR}/archive/Build/Products/${CONFIGURATION}-iphoneos/RiveRuntime.framework" \
   -framework "${BASEDIR}/archive/Build/Products/${CONFIGURATION}-iphonesimulator/RiveRuntime.framework" \
-  -framework "${BASEDIR}/archive/Build/Products/${CONFIGURATION}-macosx/RiveRuntime.framework" \
+  -framework "${BASEDIR}/archive/Build/Products/${CONFIGURATION}/RiveRuntime.framework" \
   -output "${BASEDIR}/archive/RiveRuntime.xcframework" | xcpretty

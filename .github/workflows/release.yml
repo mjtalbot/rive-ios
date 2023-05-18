@@ -161,10 +161,10 @@ jobs:
         name: Build release iphonesimulator framework
         run: sh ./scripts/build_framework.sh  -t iphonesimulator -c Release
       - id: build_macosx
-        name: Build release iphonesimulator framework
+        name: Build release macos framework
         run: sh ./scripts/build_framework.sh  -t macosx -c Release
       - id: merge_frameworks
-        if: steps.build_iphoneos.conclusion == 'success' && steps.build_iphonesimulator.conclusion == 'success'
+        if: steps.build_iphoneos.conclusion == 'success' && steps.build_iphonesimulator.conclusion == 'success'  && steps.build_macosx.conclusion == 'success'
         name: Merge created frameworks
         run: sh ./scripts/merge_frameworks.sh -c Release
       - id: zip

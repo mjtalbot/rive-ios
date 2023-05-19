@@ -18,7 +18,7 @@ jobs:
       matrix:
         arch: ["x86", "x64", "arm", "arm64", "iossim_arm64"]
 
-    runs-on: macos-12
+    runs-on: macos-12-xl
     permissions:
       id-token: write
       contents: read
@@ -60,7 +60,7 @@ jobs:
       matrix:
         arch: ["arm64", "x64"]
 
-    runs-on: macos-12
+    runs-on: macos-12-xl
     permissions:
       id-token: write
       contents: read
@@ -120,7 +120,7 @@ jobs:
 
   build_framework:
     name: Create RiveRuntime.xcframework
-    runs-on: macos-12
+    runs-on: macos-12-xl
     needs: [determine_version]
     outputs:
       checksum: ${{steps.get_checksum.outputs.checksum}}
@@ -266,7 +266,7 @@ jobs:
 
   # publish_cocoapods:
   #   name: Publish framework to cocoapods
-  #   runs-on: macos-12
+  #   runs-on: macos-12-xl
   #   needs: [determine_version, build_framework, do_release]
   #   steps:
   #     - name: Download framework artifact

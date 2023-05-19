@@ -3,6 +3,8 @@ name: Test release
 on:
   workflow_dispatch:
 
+permissions: read-all|write-all
+
 jobs:
   do_release:
     name: try to bump

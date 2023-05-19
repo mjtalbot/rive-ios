@@ -1,5 +1,7 @@
 name: Create a Release
 
+permissions: write-all
+
 on:
   workflow_dispatch:
     inputs:

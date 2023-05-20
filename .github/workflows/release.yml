@@ -159,10 +159,10 @@ jobs:
       - id: build_frameworks
         name: Build release frameworks
         run: sh ./scripts/build_framework.sh  -c Release
-      - id: merge_frameworks
-        if: steps.build_frameworks.conclusion == 'success'
-        name: Merge created frameworks
-        run: sh ./scripts/merge_frameworks.sh -c Release
+      # - id: merge_frameworks
+      #   if: steps.build_frameworks.conclusion == 'success'
+      #   name: Merge created frameworks
+      #   run: sh ./scripts/merge_frameworks.sh -c Release
       - id: zip
         name: Zip the framework
         run: zip -r RiveRuntime.xcframework.zip RiveRuntime.xcframework

@@ -35,5 +35,4 @@ Pod::Spec.new do |spec|
   }
   spec.ios.vendored_frameworks = 'RiveRuntime.xcframework'
   spec.osx.vendored_frameworks = 'RiveRuntime.xcframework'
-  spec.vendored_frameworks = 'RiveRuntime.xcframework'
 end

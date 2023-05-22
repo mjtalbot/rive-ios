@@ -165,7 +165,7 @@ jobs:
       #   run: sh ./scripts/merge_frameworks.sh -c Release
       - id: zip
         name: Zip the framework
-        run: zip -r RiveRuntime.xcframework.zip RiveRuntime.xcframework
+        run: zip -r --symlinks RiveRuntime.xcframework.zip RiveRuntime.xcframework
         working-directory: ./archive
       - id: get_checksum
         name: Add the checksum of the zip file into our environment
